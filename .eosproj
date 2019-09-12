@@ -1,0 +1,20 @@
+{
+  "main": "src\\sovmintofeos.cpp",
+  "contract": "sovmintofeos",
+  "include": "", "resource": "ricardian",
+  "cdt": "",
+  "output": "",
+  "scripts": {
+    "build": "eosio-cpp -abigen -I ./include -R ricardian -contract sovmintofeos -o sovmintofeos.wasm src/sovmintofeos.cpp"
+  },
+  "deploy": {
+    "target": "both",
+    "mainnet": "",
+    "kylin": "",
+    "jungle": "",
+    "local": ""
+  },
+  "test": {
+    "npmClient": ""
+  }
+}

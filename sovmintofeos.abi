@@ -1,0 +1,321 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "account",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                },
+                {
+                    "name": "storebalance",
+                    "type": "asset"
+                },
+                {
+                    "name": "unstaking",
+                    "type": "asset"
+                },
+                {
+                    "name": "unstake_time",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "airburn",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "airgrab2",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "value",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "close",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "value",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "issuer",
+                    "type": "name"
+                },
+                {
+                    "name": "maximum_supply",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "currency_stats",
+            "base": "",
+            "fields": [
+                {
+                    "name": "supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "max_supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "issuer",
+                    "type": "name"
+                },
+                {
+                    "name": "burn_time",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "issue",
+            "base": "",
+            "fields": [
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "retire",
+            "base": "",
+            "fields": [
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "selfburn",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "signup",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "store",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "value",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "withdraw",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "value",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "xtransfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "airburn",
+            "type": "airburn",
+            "ricardian_contract": "---\r\nspec_version: \"0.2.0\"\r\ntitle: Airburn Tokens\r\nsummary: 'Airburn {{nowrap amount}}'\r\nicon: @ICON_BASE_URL@/@TOKEN_ICON_URI@\r\n---\r\n\r\n{{account}} agrees to burn {{amount}} from the balance of sovmintofeos."
+        },
+        {
+            "name": "airgrab2",
+            "type": "airgrab2",
+            "ricardian_contract": "---\r\nspec_version: \"0.2.0\"\r\ntitle: Airgrab Tokens\r\nsummary: 'Airgrab {{nowrap amount}}'\r\nicon: @ICON_BASE_URL@/@TOKEN_ICON_URI@\r\n---\r\n\r\n{{account}} agrees to airgrab {{amount}}, this is not an investment contract nor does it represent any type of claim, loan or ownership interest.  Airgrabbing SOV tokens does not provide airgrabber with rights of any form, including, but not limited to, any voting, or other financial or legal rights."
+        },
+        {
+            "name": "close",
+            "type": "close",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "issue",
+            "type": "issue",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "retire",
+            "type": "retire",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "selfburn",
+            "type": "selfburn",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "store",
+            "type": "store",
+            "ricardian_contract": "---\r\nspec_version: \"0.2.0\"\r\ntitle: Store Tokens\r\nsummary: 'Store {{nowrap value}}'\r\nicon: @ICON_BASE_URL@/@TOKEN_ICON_URI@\r\n---\r\n\r\n{{account}} agrees to store {{value}}, causing these specified tokens to be non-transferable, and only transferable upon waiting 3 days after executing a withdraw action."
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": "spec_version: \"0.2.0\"\r\ntitle: Transfer Tokens\r\nsummary: 'Send {{nowrap quantity}} from {{nowrap from}} to {{nowrap to}}'\r\nicon: @ICON_BASE_URL@/@TRANSFER_ICON_URI@\r\n---\r\n\r\n{{from}} agrees to send {{quantity}} to {{to}}. {{from}} agrees to burn a percent of this transaction corresponding to burn schedule.\r\n\r\n{{#if memo}}There is a memo attached to the transfer stating:\r\n{{memo}}\r\n{{/if}}\r\n\r\nIf {{from}} is not already the RAM payer of their {{asset_to_symbol_code quantity}} token balance, {{from}} will be designated as such. As a result, RAM will be deducted from {{from}}’s resources to refund the original RAM payer.\r\n\r\nIf {{to}} does not have a balance for {{asset_to_symbol_code quantity}}, {{from}} will be designated as the RAM payer of the {{asset_to_symbol_code quantity}} token balance for {{to}}. As a result, RAM will be deducted from {{from}}’s resources to create the necessary records."
+        },
+        {
+            "name": "withdraw",
+            "type": "withdraw",
+            "ricardian_contract": "---\r\nspec_version: \"0.2.0\"\r\ntitle: Withdraw Tokens\r\nsummary: 'Withdraw {{nowrap value}}'\r\nicon: @ICON_BASE_URL@/@TOKEN_ICON_URI@\r\n---\r\n\r\n{{account}} agrees to withdraw {{value}}, which will become transferable 3 days after this action. The withdraw process will be reset to 3 days for any tokens currently in withdraw at the time of this action."
+        },
+        {
+            "name": "xtransfer",
+            "type": "xtransfer",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "accounts",
+            "type": "account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "signuplist",
+            "type": "signup",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "stat",
+            "type": "currency_stats",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
